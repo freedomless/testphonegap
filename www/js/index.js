@@ -41,7 +41,7 @@ var app = {
 
             var notificationOpenedCallBack = function(jsonData) {
                 console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-                alert(jsonData['notification']['payload']['title'] + "\n" + jsonData['notification']['payload']['body']);
+                // alert(jsonData['notification']['payload']['title'] + "\n" + jsonData['notification']['payload']['body']);
             };            
 
             window.plugins.OneSignal
@@ -50,7 +50,7 @@ var app = {
                 //     // alert("Notification received:\n" + JSON.stringify(jsonData));
                 //     console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
                 // })
-                .handleNotificationOpened(notificationOpenedCallBack)
+                // .handleNotificationOpened(notificationOpenedCallBack)
                 .endInit();
     },
     // Update DOM on a Received Event
