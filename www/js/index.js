@@ -43,9 +43,12 @@ var app = {
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
             };            
 
-            window.plugins.OneSignal.startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
+            window.plugins.OneSignal
+                .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
                 .handleNotificationOpened(notificationOpenedCallBack)
                 .endInit();
+
+            window.plugins.enableInAppAlertNotification(true);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
