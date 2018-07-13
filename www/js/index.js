@@ -43,18 +43,9 @@ var app = {
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
             };            
 
-            window.plugins.OneSignal.init("adfdf8db-3cbf-46c6-b574-9a9a60ca41d3", 
-                {googleProjectNumber: "829145528436"}, notificationOpenedCallBack);
-
-            // var notificationOpenedCallback = function(jsonData) {
-            //     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-            //     alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-            // };
-        
-            // window.plugins.OneSignal
-            // .startInit("adfdf8db-3cbf-46c6-b574-9a9a60ca41d3")
-            // .handleNotificationOpened(notificationOpenedCallback)
-            // .endInit();
+            window.plugins.OneSignal.startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
+                .handleNotificationOpened(notificationOpenedCallBack)
+                .endInit();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
