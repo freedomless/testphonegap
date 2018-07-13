@@ -43,7 +43,7 @@ var app = {
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
             };            
 
-            window.plugin.OneSignal.init("adfdf8db-3cbf-46c6-b574-9a9a60ca41d3", 
+            window.plugins.OneSignal.init("adfdf8db-3cbf-46c6-b574-9a9a60ca41d3", 
                 {googleProjectNumber: "829145528436"}, notificationOpenedCallBack);
 
             // var notificationOpenedCallback = function(jsonData) {
