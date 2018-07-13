@@ -48,7 +48,8 @@ var app = {
                 .handleNotificationOpened(notificationOpenedCallBack)
                 .endInit();
 
-            window.plugins.enableInAppAlertNotification(true);
+            window.plugins.setSubscription(true);
+            window.plugins.enableNotificationWhenActive(true);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
