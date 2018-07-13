@@ -45,11 +45,9 @@ var app = {
 
             window.plugins.OneSignal
                 .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
+                .handleNotificationReceived().subscribe((data) => {console.log(data);})
                 .handleNotificationOpened(notificationOpenedCallBack)
                 .endInit();
-
-            // window.plugins.setSubscription(true);
-            window.plugins.enableNotificationWhenActive(true);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
