@@ -47,19 +47,8 @@ var app = {
 
             window.plugins.OneSignal
                 .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
-                .handleNotificationReceived(notificationOpenedCallBack)
+                //.handleNotificationReceived(notificationOpenedCallBack)
                 .handleNotificationOpened()
                 .endInit();
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
