@@ -37,13 +37,14 @@ var app = {
         
         // Add to index.js or the first page that loads with your app.
         // For Intel XDK and please add this to your app.js
+            console.log("... device ready ...");
             var notificationOpenedCallback = function(jsonData) {
                 console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
             };
         
             window.plugins.OneSignal
-            .startInit("YOUR_APPID")
+            .startInit("adfdf8db-3cbf-46c6-b574-9a9a60ca41d3")
             .handleNotificationOpened(notificationOpenedCallback)
             .endInit();
     },
