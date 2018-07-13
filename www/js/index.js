@@ -47,11 +47,11 @@ var app = {
 
             window.plugins.OneSignal
                 .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
-                .handleNotificationReceived(function(jsonData) {
-                    // alert("Notification received:\n" + JSON.stringify(jsonData));
-                    console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
-                })
-                // .handleNotificationOpened(notificationOpenedCallBack)
+                // .handleNotificationReceived(function(jsonData) {
+                //     // alert("Notification received:\n" + JSON.stringify(jsonData));
+                //     console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
+                // })
+                .handleNotificationOpened(notificationOpenedCallBack)
                 .endInit();
     },
     // Update DOM on a Received Event
