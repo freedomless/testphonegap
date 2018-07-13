@@ -38,7 +38,7 @@ var app = {
         // Add to index.js or the first page that loads with your app.
         // For Intel XDK and please add this to your app.js
             console.log("... device ready ...");
-            alert("device on.\n";
+            alert("device on.\n");
             var notificationOpenedCallBack = function(jsonData) {
                 console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
