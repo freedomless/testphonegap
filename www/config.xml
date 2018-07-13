@@ -37,7 +37,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <!-- <plugin name="onesignal-cordova-plugin" spec="^2.4.1" /> -->
+
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <gap:plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" />
 
     <!-- Requires cli-8.0.0 but we recommend using the latest version. -->

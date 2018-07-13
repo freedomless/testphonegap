@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>ВиК мониторингова система - тест 1</title>
+
+        <link rel="stylesheet" href="bootstrap/css/reboot.min.css" />
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/mystyle.css" />
+
+        <script type="text/javascript" src="js/jquery.3.3.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/ajax.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="page-header">
+                <h1 style="padding: 25px;">ВиК мониторинг</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <article>
+                    <div class="row">
+                        <div class="col-md col-10">
+                            <header>
+                                <h4>[ Име помпена ел. енергия]</h4>
+                            </header>
+                                <div style="margin-bottom: 15px;">
+                                    <div style="width: 32%; display: inline-block;">
+                                        <span id="ursLabel">Urs:</span>
+                                        <div class="progress" style="width: 90%; display: inline-block; ">
+                                            <div id="ursBar" class="progress-bar progress-bar-info" style="width:1%">
+                                              <span id="urs"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 32%; display: inline-block;">
+                                        <span id="ustLabel">Ust:</span>
+                                        <div class="progress" style="width: 90%; display: inline-block; ">
+                                            <div id="ustBar" class="progress-bar progress-bar-info" style="width:1%">
+                                              <span id="ust"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 32%; display: inline-block;">
+                                        <span id="utrLabel">Utr:</span>
+                                        <div class="progress" style="width: 90%; display: inline-block; ">
+                                            <div id="utrBar" class="progress-bar progress-bar-info" style="width:1%">
+                                              <span id="utr"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-bottom: 15px;">
+                                    <div style="width: 32%; display: inline-block;">
+                                        <span id="irLabel">Ir:</span>
+                                        <div class="progress" style="width: 90%; display: inline-block; ">
+                                            <div id="irBar" class="progress-bar progress-bar-info" style="width:1%">
+                                              <span id="ir"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 32%; display: inline-block;">
+                                        <span id="isLabel">Is:</span>
+                                        <div class="progress" style="width: 90%; display: inline-block; ">
+                                            <div id="isBar" class="progress-bar progress-bar-info" style="width:1%">
+                                              <span id="is"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 32%; display: inline-block;">
+                                        <span id="itLabel">It:</span>
+                                        <div class="progress" style="width: 90%; display: inline-block; ">
+                                            <div id="itBar" class="progress-bar progress-bar-info" style="width:1%">
+                                              <span id="it"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <p>
+                                [ Инфо за процесите и алармите ]
+                            </p>
+                            <!-- <small class="author">Никя</small> -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div style="width: 100%;">
+                    <a style="color: white; width: 24%; display: inline-block;" href="index.html">Home</a>
+                    <a style="color: white; width: 24%; display: inline-block;" href="electric.html">Electric</a>
+                    <a style="color: white; width: 24%; display: inline-block;" href="well.html">Well</a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/screen.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
