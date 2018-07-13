@@ -35,11 +35,11 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
-        
         // Add to index.js or the first page that loads with your app.
         // For Intel XDK and please add this to your app.js
             var notificationOpenedCallback = function(jsonData) {
-            console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+                console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+                alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
             };
         
             window.plugins.OneSignal
