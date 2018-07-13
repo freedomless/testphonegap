@@ -1,13 +1,3 @@
-window.plugins.OneSignal
-                .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
-                .handleNotificationReceived(function(jsonData) {
-                    alert("Notification received:\n" + JSON.stringify(jsonData));
-                    console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
-                  })
-                // .handleNotificationOpened(notificationOpenedCallBack)
-                .endInit();
-
-
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -48,19 +38,20 @@ var app = {
         // Add to index.js or the first page that loads with your app.
         // For Intel XDK and please add this to your app.js
             console.log("... device ready ...");
+            alert("device on.\n";
             var notificationOpenedCallBack = function(jsonData) {
                 console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
             };            
 
-            // window.plugins.OneSignal
-            //     .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
-            //     .handleNotificationReceived(function(jsonData) {
-            //         alert("Notification received:\n" + JSON.stringify(jsonData));
-            //         console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
-            //       })
-            //     // .handleNotificationOpened(notificationOpenedCallBack)
-            //     .endInit();
+            window.plugins.OneSignal
+                .startInit('adfdf8db-3cbf-46c6-b574-9a9a60ca41d3')
+                .handleNotificationReceived(function(jsonData) {
+                    alert("Notification received:\n" + JSON.stringify(jsonData));
+                    console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
+                  })
+                // .handleNotificationOpened(notificationOpenedCallBack)
+                .endInit();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
