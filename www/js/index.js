@@ -38,7 +38,7 @@ var app = {
         // Add to index.js or the first page that loads with your app.
         // For Intel XDK and please add this to your app.js
             console.log("... device ready ...");
-            alert("device on.\n");
+
             var notificationOpenedCallBack = function(jsonData) {
                 console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
@@ -50,7 +50,7 @@ var app = {
                     alert("Notification received:\n" + JSON.stringify(jsonData));
                     console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
                   })
-                // .handleNotificationOpened(notificationOpenedCallBack)
+                .handleNotificationOpened(notificationOpenedCallBack)
                 .endInit();
     },
     // Update DOM on a Received Event
