@@ -2,15 +2,26 @@ $(document).ready(function() {
     let i = 0;
 
     getDataFromServer();
-    let myInterval = setInterval(getDataFromServer, 3000);
+    let myInterval = setInterval(getDataFromServer, 5000);
 
     function getDataFromServer () {
         $.ajax({
             url: "https://maverickcardio.com/test/index.php"
         }).done(function(dataFromServer) {
-            updateElectricData(dataFromServer);
+            console.log(dataFromServer);
+            if (dataFromServer != "None") {
+                updateElectricData(dataFromServer);
+            }
+            else {
+                cordova.plugins.notification.local.schedule({
+                    title: 'My first notification',
+                    text: 'Thats pretty easy...',
+                    foreground: true
+                });
+            }
         }).fail(function () {
-            $("#debug").html(dataFromServer);
+            console.log("HTTP error!");
+            console.log(dataFromServer);
         });
     }
 

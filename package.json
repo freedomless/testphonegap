@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/phonegap/phonegap-app-hello-world",
   "dependencies": {
+    "cordova-plugin-local-notification": "git+https://github.com/katzer/cordova-plugin-local-notifications.git",
     "onesignal-cordova-plugin": "^2.4.1"
   },
   "cordova": {
     "plugins": {
-      "onesignal-cordova-plugin": {}
+      "onesignal-cordova-plugin": {},
+      "cordova-plugin-local-notification": {}
     }
   }
 }
