@@ -9,7 +9,7 @@ $(document).ready(function() {
             url: "https://maverickcardio.com/test/index.php"
         }).done(function(dataFromServer) {
             console.log(dataFromServer);
-            if (dataFromServer != "None") {
+            if (dataFromServer) {
                 updateElectricData(dataFromServer);
             }
             else {
