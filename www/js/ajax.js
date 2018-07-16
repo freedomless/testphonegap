@@ -11,7 +11,7 @@ $(document).ready(function() {
             console.log(dataFromServer);
             if (dataFromServer) {
                 if (dataFromServer["jsonData"]) {
-                    updateElectricData(dataFromServer);
+                    updateElectricData(dataFromServer["jsonData"]);
                 }
                 
                 if (dataFromServer["msgTitle"] != "" && dataFromServer["msgBody"] != "") {
