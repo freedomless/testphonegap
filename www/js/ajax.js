@@ -10,14 +10,17 @@ $(document).ready(function() {
         }).done(function(dataFromServer) {
             console.log(dataFromServer);
             if (dataFromServer) {
-                updateElectricData(dataFromServer);
-            }
-            else {
-                cordova.plugins.notification.local.schedule({
-                    title: 'My first notification',
-                    text: 'Thats pretty easy...',
-                    foreground: true
-                });
+                if (dataFromServer["jsonData"]) {
+                    updateElectricData(dataFromServer);
+                }
+                
+                if (dataFromServer["msgTitle"] != "" && dataFromServer["msgBody"] != "") {
+                    cordova.plugins.notification.local.schedule({
+                        title: dataFromServer["msgTitle"],
+                        text: dataFromServer["msgBody"],
+                        foreground: true
+                    });
+                }
             }
         }).fail(function () {
             console.log("HTTP error!");
