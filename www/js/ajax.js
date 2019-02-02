@@ -13,8 +13,8 @@ $(document).ready(function() {
                 if (dataFromServer["jsonData"]) {
                     updateElectricData(dataFromServer["jsonData"]);
                 }
-                
-                if (dataFromServer["msgTitle"] != "" && dataFromServer["msgBody"] != "") {
+
+                if (dataFromServer["msgTitle"] && dataFromServer["msgBody"]) {
                     cordova.plugins.notification.local.schedule({
                         title: dataFromServer["msgTitle"],
                         text: dataFromServer["msgBody"],
@@ -65,8 +65,5 @@ $(document).ready(function() {
         barPurcentage = Number(dataFromServer[5] / 1000 * 100);
         $("#itBar").css("width", barPurcentage + "%");
         $("#it").html(dataFromServer[5] / 10 + " A");
-
     }
-
-
 });
